@@ -29,6 +29,6 @@ tail -f /var/log/syslog
 
 # moOde UI integration
 
-Replace file "worker.php" in "/var/www/command" \
+Replace file "worker.php" in "/var/www/daemon" \
 Relace file "sys-config.php" in "/var/www" \
 Replace file "sys-config.html" in "/var/www/templates"

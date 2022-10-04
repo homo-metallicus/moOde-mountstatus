@@ -31,7 +31,10 @@ tail -f /var/log/syslog
 
 # moOde UI integration
 
-Execute script "setupDB.sh" in "/usr/local/sbin" \
+Place script "setupDB.sh" in "/usr/local/sbin", make it executable and execute it: \
+sudo chmod +x /usr/local/sbin/setupDB.sh \
+sudo /usr/local/sbin/setupDB.sh
+
 Replace file "worker.php" in "/var/www/daemon" \
 Relace file "sys-config.php" in "/var/www" \
 Replace file "sys-config.html" in "/var/www/templates"

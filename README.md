@@ -11,9 +11,9 @@ Works with Samba, NFS, UPnP shares and attached USB device(s).
 
 Red LED off by default.
 
-Fixed green LED: configured source(s) and/or attached USB device(s) available. \
+Fixed green LED: all configured source(s) and/or attached USB device(s) available. \
 Blinking green LED: at least one of the configured sources and/or attached USB device(s) unavailable. \
-Fixed red LED: configured source(s) and/or attached USB device(s) unavailable.
+Fixed red LED: all configured source(s) and/or attached USB device(s) unavailable.
 
 # Install systemd service
 

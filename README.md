@@ -27,7 +27,9 @@ sudo systemctl enable mounstatus.timer
 Reboot system
 
 Check the output of the script: \
-tail -f /var/log/syslog
+tail -f /var/log/syslog \
+or \
+journalctl -u mountstatus.service
 
 # moOde UI integration
 

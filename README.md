@@ -13,7 +13,7 @@ Fixed green LED: configured source(s) and/or attached USB device(s) available. \
 Blinking green LED: at least one of the configured sources and/or attached USB device(s) unavailable. \
 Fixed red LED: configured source(s) and/or attached USB device(s) unavailable.
 
-# Install
+# Install systemd service
 
 Place script "mounstatus.sh" in "/usr/local/sbin" and make it executable: \
 sudo chmod +x /usr/local/sbin/mounstatus.sh
@@ -26,3 +26,9 @@ Reboot system
 
 Check the output of the script: \
 tail -f /var/log/syslog
+
+# moOde UI integration
+
+Replace file "worker.php" in "/var/www/command" \
+Relace file "sys-config.php" in "/var/www" \
+Replace file "sys-config.html" in "/var/www/templates"

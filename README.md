@@ -5,7 +5,7 @@ It also controls the behavior of the rpi LEDs depending on availability of confi
 
 Main script is called by a one shot systemd service unit started by a systemd timer unit every 15 seconds after the last execution, you can change this timing to suite your needs. It queries the local SQLITE db to fetch sources' settings and tries to remount configured sources automatically if they become unavailable.
 
-Sources can be network shares (CIFS, NFS, UPnP) or attached USB device(s).
+Sources can be network shares (CIFS, NFS, UPnP) or attached USB devices.
 
 # LED behavior
 

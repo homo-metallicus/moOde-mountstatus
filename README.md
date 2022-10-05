@@ -8,6 +8,6 @@ It is called by a one shot systemd service unit triggered by a systemd timer uni
 Sources can be network shares (SMB, NFS) or any attached USB device. UPnP shares aren't supported anymore.
 
 Red LED is off by default. \
-**Fixed green LED**: all configured sources are available. \
-**Blinking green LED**: at least one of the configured sources is unavailable. \
-**Blinking red LED**: none of the configured sources are available.
+**Fixed green LED**: all sources are available. \
+**Blinking green LED**: at least one of the sources is unavailable. \
+**Blinking red LED**: none of the sources are available.

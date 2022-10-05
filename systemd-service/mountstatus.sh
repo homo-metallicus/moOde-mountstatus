@@ -62,11 +62,11 @@ checkLocalMount() {
 		_MOUNTPOINT=$(findmnt -o TARGET -n "${1}")
 		DEVNAME=$(basename "${_MOUNTPOINT}")
 		if [[ $(checkMount "${_MOUNTPOINT}") -eq 0 ]]; then
-			status="available"
+			status="online"
 			s=$(($s + 1))
 		else
 			/usr/bin/umount "${_MOUNTPOINT}" || /usr/bin/umount -l "${_MOUNTPOINT}"
-			status="unavailable"
+			status="offline"
 		fi
 		STATUS+=(["${DEVNAME} (USB)"]="${status}")
 	fi
@@ -141,21 +141,21 @@ if [[ -f ${SQLDB} && ${NUMSOURCES} -gt 0 ]]; then
 		# 				switchLED "green" "heartbeat"
 		# 				ln -s "${MOUNTPOINT}/${ADDRESS}/${REMOTEDIR}" "/var/lib/mpd/music/${NAME}"					
 		# 				if [ $? -eq 0 ]; then
-		# 					status="available"
+		# 					status="online"
 		# 					s=$(($s + 1))
 		# 				else
-		# 					status="unavailable"
+		# 					status="offline"
 		# 				fi
 		# 			else
-		# 				status="available"
+		# 				status="online"
 		# 				s=$(($s + 1))
 		# 			fi
 		# 		else
-		# 			status="unavailable"
+		# 			status="offline"
 		# 			rm "/var/lib/mpd/music/${NAME}" > /dev/null 2>&1
 		# 		fi
 		# 	else
-		# 		status="unavailable"
+		# 		status="offline"
 		# 	fi
 		# else
 			MOUNTPOINT="/mnt/NAS/${NAME}"
@@ -173,13 +173,13 @@ if [[ -f ${SQLDB} && ${NUMSOURCES} -gt 0 ]]; then
 					/usr/bin/umount "${cmdopt[@]}" "${MOUNTPOINT}"
 				fi
 				if [ $(mountShare "${TYPE}" "${MOUNTOPTIONS}" "${ADDRESS}" "${REMOTEDIR}" "${MOUNTPOINT}") -eq 0 ]; then
-					status="available"
+					status="online"
 					s=$(($s + 1))
 				else
-					status="unavailable"
+					status="offline"
 				fi
 			else
-				status="available"
+				status="online"
 				s=$(($s + 1))
 			fi
 		# fi
@@ -205,7 +205,7 @@ declare -a _diskparts
 # 			done
 # 		else
 # 			NUMSOURCES=$(($NUMSOURCES + 1))
-# 			status="unavailable"
+# 			status="offline"
 # 			STATUS+=(["${DEV} (USB)"]="${status}")
 # 		fi
 # 	fi
@@ -240,7 +240,7 @@ else
 	fi
 fi
 
-echo "available: ${s}/${NUMSOURCES}"
+echo "online: ${s}/${NUMSOURCES}"
 echo "---"
 
 exit 0

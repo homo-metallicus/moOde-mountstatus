@@ -33,7 +33,7 @@ tail -f /var/log/syslog \
 or \
 journalctl -u mountstatus.service
 
-# moOde UI integration
+# moOde UI
 
 moOde source files to integrate moOde-mountstatus feature to system configuration in moOde UI. \
 moOde-mounstatus feature will disable moOde's basic LED management.

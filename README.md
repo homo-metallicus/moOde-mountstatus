@@ -35,6 +35,9 @@ journalctl -u mountstatus.service
 
 # moOde UI integration
 
+moOde source files to integrate moOde-mountstatus feature to system configuration in moOde UI. \
+moOde-mounstatus feature will disable moOde's basic LED management.
+
 Place script "setupDB.sh" in "/usr/local/sbin", make it executable and execute it: \
 sudo chmod +x /usr/local/sbin/setupDB.sh \
 sudo /usr/local/sbin/setupDB.sh

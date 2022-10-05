@@ -9,6 +9,6 @@ Reboot system:
 sudo shutdown -r now
 
 Check the output of the script:
-tail -f /var/log/syslog
-or
+tail -f /var/log/syslog \
+or \
 journalctl -u mountstatus.service

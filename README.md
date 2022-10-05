@@ -1,6 +1,6 @@
 # moOde-mountstatus
 
-moOde-mounstatus is an experimental feature which consists in a set of systemd service definition files, shell script and modified moOde UI source files to improve moOde's audio player auto remount capabilities.
+moOde-mounstatus is an experimental feature which consists in a set of systemd service definition files, shell script and modified moOde UI source files to improve moOde's audio player auto remount capabilities. \
 moOde-mounstatus also controls the behavior of the rpi LEDs depending on availability of configured sources. \
 Sources can be network shares (SMB, NFS, UPnP) or attached USB devices.
 

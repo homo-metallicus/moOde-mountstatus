@@ -160,7 +160,6 @@ if [[ -f ${SQLDB} && ${NUMSOURCES} -gt 0 ]]; then
 		# else
 			MOUNTPOINT="/mnt/NAS/${NAME}"
 			if [ $(checkMount "${MOUNTPOINT}") -ne 0 ]; then
-				# switchLED "green" "heartbeat"
 				case "${TYPE}" in
 					"cifs") MOUNTOPTIONS="user=${USERNAME},password=${PASSWORD},${OPTIONS},iocharset=${CHARSET},rsize=${RSIZE},wsize=${WSIZE}"
 					cmdopt=( -l )

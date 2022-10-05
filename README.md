@@ -19,7 +19,7 @@ Blinking red LED: none of the configured sources are available.
 Place script "mounstatus.sh" in "/usr/local/sbin" and make it executable: \
 sudo chmod +x /usr/local/sbin/mounstatus.sh
 
-Place systemd service definition files "mounstatus.service" and "mounstatus.timer" in "/etc/systemd/system" and enable them to launch at startup: \
+Place systemd service definition files "mounstatus.service" and "mounstatus.timer" in "/etc/systemd/system" and enable them: \
 sudo systemctl enable mounstatus.service \
 sudo systemctl enable mounstatus.timer
 

@@ -14,7 +14,7 @@ Fixed green LED: all configured sources are available. \
 Blinking green LED: at least one of the configured sources is unavailable. \
 Blinking red LED: none of the configured sources are available.
 
-# Install systemd service
+# systemd service
 
 Place script "mounstatus.sh" in "/usr/local/sbin" and make it executable: \
 sudo chmod +x /usr/local/sbin/mounstatus.sh

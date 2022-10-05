@@ -15,33 +15,3 @@ Red LED off by default.
 Fixed green LED: all configured sources are available. \
 Blinking green LED: at least one of the configured sources is unavailable. \
 Blinking red LED: none of the configured sources are available.
-
-# systemd service
-
-Place script "mounstatus.sh" in "/usr/local/sbin" and make it executable: \
-sudo chmod +x /usr/local/sbin/mounstatus.sh
-
-Place systemd service definition files "mounstatus.service" and "mounstatus.timer" in "/etc/systemd/system" and enable them: \
-sudo systemctl enable mounstatus.service \
-sudo systemctl enable mounstatus.timer
-
-Reboot system: \
-sudo shutdown -r now
-
-Check the output of the script: \
-tail -f /var/log/syslog \
-or \
-journalctl -u mountstatus.service
-
-# moOde UI
-
-moOde source files to integrate moOde-mountstatus feature to system configuration in moOde UI. \
-moOde-mounstatus feature will disable moOde's basic LED management.
-
-Place script "setupDB.sh" in "/usr/local/sbin", make it executable and execute it: \
-sudo chmod +x /usr/local/sbin/setupDB.sh \
-sudo /usr/local/sbin/setupDB.sh
-
-Replace file "worker.php" in "/var/www/daemon" \
-Relace file "sys-config.php" in "/var/www" \
-Replace file "sys-config.html" in "/var/www/templates"

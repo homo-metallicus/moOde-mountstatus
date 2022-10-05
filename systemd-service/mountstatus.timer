@@ -1,8 +1,8 @@
 [Unit]
-Description=Launches mountstatus.service every 5 seconds
+Description=Launches mountstatus.service every 3 seconds
 
 [Timer]
-OnUnitActiveSec=5s
+OnUnitActiveSec=3s
 Unit=mountstatus.service
 
 [Install]

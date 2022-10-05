@@ -23,7 +23,8 @@ Place systemd service definition files "mounstatus.service" and "mounstatus.time
 sudo systemctl enable mounstatus.service \
 sudo systemctl enable mounstatus.timer
 
-Reboot system
+Reboot system: \
+sudo shutdown -r now
 
 Check the output of the script: \
 tail -f /var/log/syslog \

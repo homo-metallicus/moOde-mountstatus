@@ -5,7 +5,7 @@ moOde-mounstatus is an **experimental feature** which consists in a set of syste
 Main script "mounstatus.sh" checks moOde's sources' availability, tries to remount them automatically if they become unavailable and controls raspberry pi LEDs' operation accordingly. \
 It is called by a one shot systemd service unit triggered by a systemd timer unit every 15 seconds.
 
-Sources can be network shares (SMB, NFS) or any attached USB device. UPnP isn't supported anymore as a source.
+Sources can be network shares (SMB, NFS) or any attached USB device. UPnP shares aren't supported anymore.
 
 Red LED is off by default. \
 **Fixed green LED**: all configured sources are available. \

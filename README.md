@@ -7,7 +7,7 @@ It is called by a one shot systemd service unit triggered by a systemd timer uni
 
 Sources can be network shares (SMB, NFS) or any attached USB device. UPnP shares aren't supported anymore.
 
-Red LED is off by default. \
-**Fixed green LED**: all sources are online. \
-**Blinking green LED**: at least one of the sources is offline. \
-**Blinking red LED**: all sources are offline.
+Red LED off by default. \
+**Fixed green LED**: all sources online. \
+**Blinking green LED**: at least one source offline. \
+**Blinking red LED**: all sources offline.

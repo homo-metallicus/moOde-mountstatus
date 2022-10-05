@@ -1,0 +1,9 @@
+[Unit]
+Description=Launches mountstatus.service every 15 seconds
+
+[Timer]
+OnUnitActiveSec=15s
+Unit=mountstatus.service
+
+[Install]
+WantedBy=timers.target

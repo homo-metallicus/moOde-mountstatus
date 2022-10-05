@@ -1,0 +1,11 @@
+[Unit]
+Description=mount status
+DefaultDependencies=no
+After=smbd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/mountstatus.sh
+
+[Install]
+WantedBy=default.target

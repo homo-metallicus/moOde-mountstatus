@@ -44,10 +44,10 @@ disableLeds() {
 
 switchLED() {
 	case "${1}" in
-		"green") LED=0;;
-		"red") LED=1;;
+		"green") LED="ACT";;
+		"red") LED="PWR";;
 	esac
-	echo "${2}" > /sys/class/leds/led${LED}/trigger
+	echo "${2}" > /sys/class/leds/${LED}/trigger
 }
 
 checkMount() {
